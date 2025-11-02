@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Quest - Communication Cards</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">Time Quest</h1>
+            <p class="subtitle">Communication Cards</p>
+        </header>
+
+        <!-- Level Selection -->
+        <section id="levelSelection" class="level-selection">
+            <h2>Wähle dein Level</h2>
+            <div class="level-grid">
+                <div class="level-card" data-level="1">
+                    <div class="level-icon">🎯</div>
+                    <h3>Level 1</h3>
+                    <p>Kontaktaufnahme<br>(Eis brechen)</p>
+                    <span class="level-description">Mini-Mutmomente & Körpersprache aktivieren</span>
+                </div>
+                
+                <div class="level-card" data-level="2">
+                    <div class="level-icon">💬</div>
+                    <h3>Level 2</h3>
+                    <p>Smalltalk &<br>Mini-Gespräche</p>
+                    <span class="level-description">Gesprächsfluss üben & Reaktionen wahrnehmen</span>
+                </div>
+                
+                <div class="level-card" data-level="3">
+                    <div class="level-icon">🤝</div>
+                    <h3>Level 3</h3>
+                    <p>Gespräche mit Tiefe<br>(Verbindung spüren)</p>
+                    <span class="level-description">Echte Themen, ehrliche Antworten, weniger Maske</span>
+                </div>
+                
+                <div class="level-card" data-level="4">
+                    <div class="level-icon">💡</div>
+                    <h3>Level 4</h3>
+                    <p>Ideen & Authentizität<br>(Mut zeigen)</p>
+                    <span class="level-description">Von sich erzählen, Haltung zeigen, echtes Feedback bekommen</span>
+                </div>
+                
+                <div class="level-card" data-level="5">
+                    <div class="level-icon">💙</div>
+                    <h3>Level 5</h3>
+                    <p>Tiefe & Verbundenheit<br>(Seelenmodus)</p>
+                    <span class="level-description">Menschlichkeit, Sinn, gegenseitige Inspiration</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Question Display -->
+        <section id="questionDisplay" class="question-display hidden">
+            <div class="question-header">
+                <button id="backBtn" class="back-btn">← Zurück zur Levelauswahl</button>
+                <div class="current-level">
+                    <span id="currentLevelText">Level 1</span>
+                </div>
+            </div>
+            
+            <div class="question-card">
+                <div class="question-content">
+                    <h3 id="questionText">Hier erscheint deine Frage...</h3>
+                </div>
+                
+                <div class="question-actions">
+                    <button id="newQuestionBtn" class="btn btn-primary">Neue Frage</button>
+                    <button id="changeLevelBtn" class="btn btn-secondary">Level wechseln</button>
+                </div>
+            </div>
+            
+            <!-- Additional Questions Box for Level 1 -->
+            <div id="additionalQuestions" class="additional-questions hidden">
+                <h4>Schätzfragen:</h4>
+                <ul id="additionalQuestionsList"></ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
